@@ -13,7 +13,6 @@ def long_process_on_data_frame(data_frame, result, *args, **kwargs):
     # This function can alos return something if you want
     
 
-
 def multi_process_long_process_on_data_frame(data_frame):    
     manager = multiprocessing.Manager() # Setup a manager for capturing the result as a data structure
     return_list = manager.list()
@@ -35,8 +34,8 @@ def multi_process_long_process_on_data_frame(data_frame):
     return result
 
 
-""" Second Approach (Using Processor Pool)"""
 
+""" Second Approach (Using Processor Pool)"""
 
 def multi_process_with_processor_pool(data_frame):
     num_of_processes = multiprocessing.cpu_count()
